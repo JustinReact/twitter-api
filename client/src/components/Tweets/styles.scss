@@ -1,0 +1,69 @@
+.tweets-container {
+  padding-top: 50px;
+}
+
+.tweets-container-header {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.tweets-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.tweets-card {
+  background-color: white;
+  border: 1px solid #8f8f8f;
+  border-radius: 5px;
+  padding: 10px 15px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  height: 300px;
+}
+
+.tweets-card-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3px;
+  margin-bottom: 10px;
+}
+
+.tweets-card-body {
+  max-height: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow-y: auto;
+  &::-webkit-scrollbar-track {
+    background-color: whitesmoke;
+    z-index: 20;
+
+    &:hover {
+      background-color: whitesmoke;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 5px;
+    background-color: whitesmoke;
+
+    &:hover {
+      background-color: whitesmoke;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 7px;
+
+    background-color: #868686;
+    transition: all 0.3s ease-in-out;
+    z-index: 20;
+
+    &:hover {
+      background-color: #636363;
+    }
+  }
+}
